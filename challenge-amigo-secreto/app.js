@@ -2,16 +2,29 @@
 let listaAmigos = [];
 let amigosSorteados = [];
 
+function asignarTextoElemento(elemento, texto) {
+    let elementoHTML = document.querySelector(elemento);
+    elementoHTML.innerHTML = texto;
+    return;
+}
+
+function limpiarCaja() {
+    document.querySelector('#amigo').value = '';
+}
+
 function agregarAmigo() {
     let nombreAmigo = document.getElementById('amigo').value;
     if (nombreAmigo == '') {
-        alert('Esta vacio');
+        asignarTextoElemento('#resultado', "No haz escrito el nombre de tus amigos");
     } else {
         if (listaAmigos.includes(nombreAmigo)) {
-            alert('Ya escribiste ese nombre');
+            asignarTextoElemento('#resultado', "Ya agregaste un amigo con ese nombre");
+            limpiarCaja()
         } else {
+            asignarTextoElemento('#resultado', '');
             listaAmigos.push(nombreAmigo);
-            console.log(listaAmigos);
+            limpiarCaja()
+            asignarTextoElemento("#listaAmigos", listaAmigos);
         }
         
     }
@@ -21,7 +34,11 @@ function agregarAmigo() {
 function sortearAmigo() {
     // Si la lista de amigo sorteados es igual a la lista de amigos:
     if (amigosSorteados.length === listaAmigos.length) {
-        alert('Se han sorteado todos los amigos');
+        asignarTextoElemento('#resultado', "Ya se han sorteado todos tus amigos");
+        asignarTextoElemento("#listaAmigos", '')
+        listaAmigos = [];
+        amigosSorteados = [];
+        
     } else {
         // Se crea un indice aleatorio basado en la extension de la lista de amigos:
         let indiceAleatorio = parseInt(Math.random()*listaAmigos.length);
@@ -35,7 +52,7 @@ function sortearAmigo() {
             // Si el amigo aun no se ha sorteado lo anade a la lista de sorteados y lo devuelve:
             amigosSorteados.push(amigoSecreto);
             console.log(amigosSorteados);
-            alert(`Tu amigo secreto es ${amigoSecreto}`);
+            asignarTextoElemento('#resultado', `Tu amigo secreto es: ${amigoSecreto}`);
             return amigoSecreto;
         }
     } 
