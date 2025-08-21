@@ -27,8 +27,8 @@ function agregarAmigo() {
             asignarTextoElemento('#resultado', "Ya agregaste un amigo con ese nombre.");
             limpiarCaja()
         } else {
-            // Si es un nombre nuevo lo anade a la lista de amigos:
             asignarTextoElemento('#resultado', '');
+            // Si es un nombre nuevo lo anade a la lista de amigos:
             listaAmigos.push(nombreAmigo);
             limpiarCaja();
             // Mostrando el amigo en la iterfaz:
