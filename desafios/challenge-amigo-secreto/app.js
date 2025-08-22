@@ -18,13 +18,13 @@ function limpiarCaja() {
 function agregarAmigo() {
     // Obtiene el valor del campo de texto de amigo:
     let nombreAmigo = document.getElementById('amigo').value;
-    if (nombreAmigo == '' || nombreAmigo.length < 3) {
+    if (nombreAmigo.trim() == '' || nombreAmigo.length < 3) {
         // Si el nombre del amigo esta vacio o tiene menos de 3 caracteres:
         alert("Por favor, ingrese un nombre valido.");
     } else {
         // Verificando si el amigo ya se escribio antes:
-        if (listaAmigos.includes(nombreAmigo)) {
-            asignarTextoElemento('#resultado', "Ya agregaste un amigo con ese nombre.");
+        if (listaAmigos.includes(nombreAmigo.trim())) {
+            alert("Ya agregaste un amigo con ese nombre.");
             limpiarCaja()
         } else {
             asignarTextoElemento('#resultado', '');
@@ -73,7 +73,8 @@ function sortearAmigo() {
         } 
     } else {
         // Cuando se ha presionado sortear sin agregar amigos:
-        asignarTextoElemento('#resultado', "Añade al menos 2 amigos para realizar el sorteo.");
+        alert("Añade al menos 2 amigos para realizar el sorteo.");
+        asignarTextoElemento('#resultado', '');
     }
     
 }
