@@ -1,66 +1,50 @@
-# Challenge Amigo Secreto 🎁
+# Challenge Amigo Secreto 🎉
 
-## Descripción 📝
-**Challenge Amigo Secreto** es una aplicación web desarrollada como parte de un curso de programación en JavaScript de Alura Latam. Permite a los usuarios crear una lista de nombres de amigos y realizar sorteos aleatorios para determinar un "amigo secreto". La aplicación incluye funcionalidades adicionales como múltiples sorteos, validaciones mejoradas y mensajes informativos para mejorar la experiencia del usuario.
+## Descripción 📋
+**Challenge Amigo Secreto** es una aplicación web desarrollada para un curso de JavaScript de Alura Latam. Permite crear una lista de nombres y sortear un "amigo secreto" aleatoriamente, con validaciones y múltiples sorteos.
 
 ## Funcionalidades ✨
-- **Agregar nombres**: Los usuarios pueden ingresar nombres en un campo de texto y añadirlos a una lista visible al hacer clic en el botón "Adicionar".
-- **Validación de entrada**:
-  - Se muestra una alerta si el campo de texto está vacío 🚫.
-  - No se permiten nombres con menos de 2 caracteres.
-  - El sorteo requiere al menos dos nombres en la lista.
-- **Visualización de la lista**: Los nombres ingresados se muestran en una lista en la página 📋.
-- **Sorteo aleatorio**: Al hacer clic en "Sortear Amigo", se selecciona un nombre aleatoriamente y se muestra en pantalla 🎲.
-- **Múltiples sorteos**: Permite realizar varios sorteos, asegurando que cada sorteo seleccione un amigo diferente al sorteado previamente.
-- **Notificación de finalización**: Muestra un mensaje cuando todos los amigos han sido sorteados ✅.
+- **Agregar nombres**: Añade nombres a una lista con el botón "Agregar" 📝.
+- **Validaciones**: 
+  - Evita campos vacíos o nombres con menos de 2 caracteres 🚫.
+  - Requiere al menos 2 nombres para sortear.
+- **Lista visible**: Muestra los nombres ingresados en pantalla 📋.
+- **Sorteo aleatorio**: Selecciona un nombre al azar con "Sortear Amigo" 🎲.
+- **Múltiples sorteos**: Permite sortear varios amigos distintos.
+- **Notificación**: Avisa cuando todos los nombres han sido sorteados ✅.
 
-## Tecnologías utilizadas 💻
-- **HTML**: Estructura de la interfaz de usuario.
-- **CSS**: Estilización de la página para una experiencia visual atractiva.
-- **JavaScript**: Lógica de la aplicación, incluyendo la gestión de la lista, validaciones y sorteos aleatorios.
+## Tecnologías 💻
+- **HTML**: Estructura de la interfaz.
+- **CSS**: Estilos visuales.
+- **JavaScript**: Lógica de sorteo y validaciones.
 
 ## Instalación ⚙️
-1. Clona o descarga el repositorio en tu máquina local.
+1. Clona el repositorio:
    ```bash
    git clone <URL_DEL_REPOSITORIO>
    ```
-2. Abre el archivo `index.html` en un navegador web moderno (Google Chrome, Firefox, etc.).
-   - No se requieren dependencias adicionales ni servidores, ya que la aplicación es completamente del lado del cliente.
+2. Abre `index.html` en un navegador (Chrome, Firefox, etc.).
 
-## Cómo usar 🖱️
-1. **Agregar amigos**:
-   - Escribe el nombre de un amigo en el campo de texto.
-   - Haz clic en el botón **Adicionar** para añadir el nombre a la lista.
-   - Repite hasta agregar todos los nombres deseados (mínimo 2 nombres).
-2. **Realizar sorteo**:
-   - Haz clic en el botón **Sortear Amigo** para seleccionar un nombre aleatoriamente.
-   - El nombre sorteado aparecerá en pantalla.
-3. **Continuar sorteos**:
-   - Puedes realizar múltiples sorteos; cada sorteo seleccionará un amigo diferente.
-   - Cuando todos los amigos hayan sido sorteados, aparecerá un mensaje indicando que no hay más nombres disponibles.
+## Uso 🖱️
+1. Escribe un nombre y haz clic en **Adicionar**.
+2. Repite para añadir más nombres (mínimo 2).
+3. Clic en **Sortear Amigo** para ver el resultado.
+4. Continúa sorteando; se notificará cuando no queden nombres.
 
-## Estructura del proyecto 📂
+## Estructura 📂
 ```
 Challenge-Amigo-Secreto/
-├── index.html      # Estructura principal de la aplicación
-├── styles.css      # Estilos de la interfaz
-├── script.js       # Lógica de la aplicación en JavaScript
-└── README.md       # Documentación del proyecto
+├── index.html    # Interfaz principal
+├── styles.css    # Estilos
+├── script.js     # Lógica JavaScript
+└── README.md     # Documentación
 ```
 
-## Ejemplo de uso 🌟
-1. Ingresa nombres como "Ana", "Juan", "María" usando el botón "Adicionar".
-2. La lista en pantalla mostrará: Ana, Juan, María.
-3. Haz clic en "Sortear Amigo" y aparecerá, por ejemplo, "Tu amigo secreto es: Juan".
-4. Continúa sorteando hasta que todos los nombres se hayan seleccionado.
-5. Si intentas sortear con un solo nombre o un nombre inválido, recibirás una alerta.
-
 ## Contribuciones 🤝
-Las contribuciones son bienvenidas. Si deseas colaborar:
-1. Haz un fork del repositorio.
-2. Crea una rama para tu funcionalidad (`git checkout -b nueva-funcionalidad`).
-3. Realiza tus cambios y haz commit (`git commit -m "Descripción de cambios"`).
-4. Envía un pull request para revisión.
+Sugerencias bienvenidas:
+1. Crea un *issue* o *fork* del repositorio.
+2. Usa una rama nueva (`git checkout -b mejora`).
+3. Envía un *pull request* con tus cambios.
 
 ## Licencia 📜
-Este proyecto está bajo la licencia [MIT](LICENSE), lo que permite su uso, modificación y distribución libremente, siempre que se incluya el aviso de copyright y la declaración de la licencia.
+Bajo licencia [MIT](LICENSE).
